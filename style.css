@@ -14,6 +14,10 @@ header {
   width: 1440px;
 }
 
+.header-logo {
+    width: 120px;
+}
+
 .header-picture {
   background-image: url(./assets/img/header-img.png);
   height: 550px;

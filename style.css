@@ -28,6 +28,10 @@ header {
   align-items: center;
 }
 
+.burger-house {
+    padding-top: 100px;
+}
+
 .burger-img {
   width: 250px;
   height: 250px;
@@ -38,12 +42,16 @@ header {
 .burger-meal {
   display: flex;
   align-items: center;
-  margin-top: 210px;
+  margin-top: 275px;
   height: auto;
 }
 
 .burger-meal img {
   width: 100%;
   height: auto;
-  display: block;      /* entfernt komische Inline-Abstände */
+  display: block;
+}
+
+.menu-overlay {
+    padding-top: 100px;
 }

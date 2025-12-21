@@ -1,0 +1,33 @@
+header {
+    background-color: var(--color-background-header);
+    height: 130px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1440px;
+}
+
+.header-picture{
+    background-image: url(./assets/img/header-img.png);
+    height: 550px;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.burger-img {
+    width: 250px;
+    height:250px;
+    border-radius: 100%;
+    margin-top: 390px;
+}
+

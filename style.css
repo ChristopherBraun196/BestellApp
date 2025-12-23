@@ -39,7 +39,6 @@ header {
 
 .burger-img {
   width: 250px;
-  height: 250px;
   border-radius: 100%;
   transform: translate(0px, 50%);
   position: absolute;
@@ -52,21 +51,42 @@ figure {
   align-items: center;
 }
 
+figure img {
+  width: 100%;
+  height: auto;
+}
+
 .burger-meal {
   display: flex;
   align-items: center;
   height: auto;
 }
 /* Menu Übersichten!!!! */
-.dishes-card{
-  padding: 20px;
-  margin-top: 25px;
-  margin-left: 125px;
-  font-family: "Palanquin";
-  background-color: aqua;
-  border-radius: 25px;
+.dishes-card {
+    display: flex;
+    background-color: var(--color-background-dishes);
+    padding: 20px;
+    margin-top: 20px;
+    margin-inline: 125px;
+    font-family: "Palanquin";
+    border-radius: 18px;
+    max-width: 1250px;
+    gap: 20px;
+    height: auto;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 28px;
 }
+
+.dish-cover {
+  display: block;
+  width: 280px;
+  height: 160px;
+  border-radius: 18px;
+  object-fit: cover;
+  object-position: 0% 65%;
+  /* transform:scale(0.85); */
+}
+
+

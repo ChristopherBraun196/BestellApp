@@ -2,20 +2,22 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="", initial-scale="1.0" />
+    <meta name="viewport" content="" , initial-scale="1.0" />
     <title>BestellApp</title>
     <link
       rel="shortcut icon"
       href="./assets/icons/Logo.svg"
       type="image/x-icon"
     />
-
+    <script src="./scripts/db.js"></script>
+    <script src="./scripts/template.js"></script>
+    <script src="./script.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/standard.css" />
     <link rel="stylesheet" href="./styles/basket.css" />
     <link rel="stylesheet" href="./styles/assets.css" />
   </head>
-  <body>
+  <body onload="init()">
     <header>
       <div class="header-bar">
         <img class="header-logo" src="./assets/icons/Logo.svg" alt="Logo" />
@@ -47,28 +49,25 @@
       <h2>Burger & Sandwiches</h2>
     </section>
 
-      <section class="orange-line">
-      <img
-        class="burger-vec"
-        src="./assets/icons/Pizza.svg"
-        alt="Pizza"
-      />
-      <h2>Pizza (30cm) </h2>
-    </section>
+    <div id="burgerList"></div>
 
-      <section class="orange-line">
-      <img
-        class="burger-vec"
-        src="./assets/icons/Salad.svg"
-        alt="Burger"
-      />
+    <section class="orange-line">
+      <img class="burger-vec" src="./assets/icons/Pizza.svg" alt="Pizza" />
+      <h2>Pizza (30cm)</h2>
+    </section>
+    <div id="PizzaList"></div>
+    <section class="orange-line">
+      <img class="burger-vec" src="./assets/icons/Salad.svg" alt="Burger" />
       <h2>Salad</h2>
     </section>
-  </body>
 
-  <footer>
-    <p>&copy; BurgerHouse</p>
-    <p>Imprint</p>
-    <p>Cookie Preferences</p>
-  </footer>
+    <div id="SaladList"></div>
+
+    <footer>
+      <p>&copy; BurgerHouse</p>
+      <p>Imprint</p>
+      <p>Cookie Preferences</p>
+    </footer>
+    
+  </body>
 </html>

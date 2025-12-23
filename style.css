@@ -15,7 +15,7 @@ header {
 }
 
 .header-logo {
-    width: 120px;
+  width: 120px;
 }
 
 .header-picture {
@@ -24,34 +24,37 @@ header {
   background-size: cover;
   background-position: bottom;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
 }
 
 .burger-house {
-    padding-top: 100px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
 }
 
 .burger-img {
   width: 250px;
   height: 250px;
   border-radius: 100%;
-  margin-top: 390px;
+  transform: translate(0px, 50%);
+  position: absolute;
+  bottom: 0;
+}
+figure {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .burger-meal {
   display: flex;
   align-items: center;
-  margin-top: 275px;
   height: auto;
 }
 
-.burger-meal img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.menu-overlay {
-    padding-top: 100px;
-}

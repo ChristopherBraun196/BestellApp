@@ -10,7 +10,7 @@ function loadBurger(myDishesBurger) {
   for (let i = 0; i < myDishesBurger.length; i++) {
     const dish = myDishesBurger[i];
 
-    html += burgerCardTemplate(dish);
+    html += DishCardTemplate(dish);
   }
 
   return html;
@@ -22,7 +22,7 @@ function loadPizza(myDishesPizza) {
   for (let i = 0; i < myDishesPizza.length; i++) {
     const dish = myDishesPizza[i];
 
-    html += pizzaCardTemplate(dish);
+    html += DishCardTemplate(dish);
   }
 
   return html;
@@ -34,7 +34,7 @@ function loadSalad(myDishesSalad) {
   for (let i = 0; i < myDishesSalad.length; i++) {
     const dish = myDishesSalad[i];
 
-    html += saladCardTemplate(dish);
+    html += DishCardTemplate(dish);
   }
 
   return html;

@@ -12,6 +12,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 1440px;
+  padding-inline: 35px;
 }
 
 .header-logo {
@@ -123,6 +124,7 @@ h3 {
   font-family: "Palanquin";
   font-size: 18px;
   font-weight: 500;
+  padding-top: 15px;
 }
 
 .dish-added {

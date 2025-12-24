@@ -52,7 +52,7 @@ figure {
 }
 
 figure img {
-  width: 100%;
+  width: 65%;
   height: auto;
 }
 
@@ -61,20 +61,24 @@ figure img {
   align-items: center;
   height: auto;
 }
-/* Menu Übersichten!!!! */
+/* -------------------------- dishes overlay---------------------------------- */
 .dishes-card {
-    display: flex;
-    background-color: var(--color-background-dishes);
-    padding: 20px;
-    margin-top: 20px;
-    margin-inline: 125px;
-    font-family: "Palanquin";
-    border-radius: 18px;
-    max-width: 1250px;
-    gap: 20px;
-    height: auto;
+  display: flex;
+  background-color: var(--color-background-dishes);
+  padding: 20px;
+  margin-top: 20px;
+  margin-inline: auto;
+  font-family: "Palanquin";
+  border-radius: 18px;
+  max-width: 1250px;
+  gap: 20px;
+  height: auto;
 }
 
+.dish-head {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
 h3 {
   font-size: 28px;
 }
@@ -86,7 +90,54 @@ h3 {
   border-radius: 18px;
   object-fit: cover;
   object-position: 0% 65%;
-  /* transform:scale(0.85); */
 }
 
+.dish-actions {
+  grid-column: 2 / 3;
+  grid-row: 1 / span 2;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  height: 100%;
+  align-self: stretch;
+}
+
+.dish-price {
+  font-size: 28px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.dish-info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  column-gap: 24px;
+  flex: 1;
+}
+
+.dish-desc {
+  font-family: "Palanquin";
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.dish-added {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 44px;
+  border-radius: 20px;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+.dish-added:hover {
+  scale: calc(1.05);
+  cursor: pointer;
+}

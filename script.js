@@ -1,7 +1,7 @@
 function init() {
   document.getElementById("burgerList").innerHTML = loadBurger(myDishesBurger);
-  document.getElementById("PizzaList").innerHTML = loadPizza(myDishesPizza);
-  document.getElementById("SaladList").innerHTML = loadSalad(myDishesSalad);
+  document.getElementById("pizzaList").innerHTML = loadPizza(myDishesPizza);
+  document.getElementById("saladList").innerHTML = loadSalad(myDishesSalad);
 }
 
 function loadBurger(myDishesBurger) {

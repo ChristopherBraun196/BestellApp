@@ -1,23 +1,49 @@
 .open-Menu {
   position: fixed;
-  top: 400px;      /* Headerhöhe */
+  top: 400px; /* Headerhöhe */
   background-color: var(--color-background-basket);
   color: white;
   right: 0;
   width: 308px;
-  height: 600px;
-  border-radius: 30px 0px  0px 30px;
- 
+  min-height: 400px;
+  max-height: 600px;
+  padding-bottom: 18px;
+  border-radius: 30px 0px 0px 30px;
   overflow-y: auto;
-
   transform: translateX(110%);
   transition: transform 250ms ease;
   z-index: 9999;
 }
-.open-Menu.d-block { transform: translateX(0); }
+.open-Menu.d-block {
+  transform: translateX(0);
+}
+
+h4 {
+  font-family: "Palanquin";
+  text-align: center;
+  font-size: 28px;
+}
+
+.meal-list {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+  border-radius: 8px;
+  background-color: white;
+  color: var(--color-background-basket);
+  margin-top: 8px;
+  margin-inline: 17px;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: 40px;
+  padding-left: 4px;
+}
 
 h5 {
- font-family: "Palanquin";
- text-align: center;
- font-size: 28px;
+  font-size: 14px;
+}
+
+.meal-list p {
+  font-size: 14px;
 }

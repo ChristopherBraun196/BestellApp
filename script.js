@@ -39,3 +39,9 @@ function loadSalad(myDishesSalad) {
 
   return html;
 }
+
+function openMenu(){
+  let overlay = document.getElementById('openMenu');
+
+  overlay.classList.toggle('d-block');
+}

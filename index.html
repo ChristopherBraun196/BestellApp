@@ -22,12 +22,16 @@
       <div class="header-bar">
         <img class="header-logo" src="./assets/icons/Logo.svg" alt="Logo" />
         <img type="button" />
-        <img onclick="" src="./assets/icons/menu.svg" alt="" />
+        <img class="menu-button"  onclick="openMenu()" src="./assets/icons/menu.svg" alt="" />
       </div>
     </header>
+
+  <!-- Main Content -->
+  <section class="main-layout">
+  <section class="content"> 
     <section class="header-picture">
       <figure>
-        <img
+        <img onclick="openMenu()"
           class="burger-img"
           src="./assets/img/Burger-House-img.png"
           alt="AnzeigeBild BurgerHouse"
@@ -50,7 +54,6 @@
     </section>
 
     <div id="burgerList"></div>
-
     <section class="orange-line">
       <img class="burger-vec" src="./assets/icons/Pizza.svg" alt="Pizza" />
       <h2>Pizza (30cm)</h2>
@@ -62,7 +65,14 @@
     </section>
 
     <div id="saladList"></div>
-
+  </section>
+<!-- Basket Wrapper -->
+  <section class="basket-wrapper">
+  <div class="open-Menu" id="openMenu"> 
+    <h5>Your Basket</h5>
+  </div>
+</section>
+</section>   
     <footer>
       <p>&copy; BurgerHouse</p>
       <p>Imprint</p>

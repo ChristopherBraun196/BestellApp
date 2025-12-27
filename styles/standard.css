@@ -7,8 +7,25 @@
 }
 
 :root {
-   --color-background-header: #E76C1F;
-   --color-background-dishes: #FDEADC;
+  --color-background-header: #e76c1f;
+  --color-background-dishes: #fdeadc;
+  --color-background-basket: #363534;
+}
+
+.main-layout {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content {
+  flex: 1;
+  width: calc(100% - 250px);
+  overflow-y: auto;
+}
+
+.menu-button:hover {
+  scale: calc(1.2);
+  cursor: pointer;
 }
 
 .menu-img {

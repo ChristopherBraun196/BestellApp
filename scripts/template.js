@@ -13,7 +13,7 @@ function DishCardTemplate(dish) {
 
         <div class="dish-actions">
           <div class="dish-price">${dish.price.toFixed(2)} €</div>
-          <button onclick="" class="dish-added" aria-label="Add to basket">
+          <button onclick="addToBasket(${dish.id}" class="dish-added" aria-label="Add to basket">
             <img src="./assets/icons/buttonAddtoBasket.svg" alt="">
           </button>
         </div>

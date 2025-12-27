@@ -11,73 +11,80 @@
     />
     <script src="./scripts/db.js"></script>
     <script src="./scripts/template.js"></script>
-   
+
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/standard.css" />
     <link rel="stylesheet" href="./styles/basket.css" />
-    
   </head>
   <body onload="init()">
     <header>
       <div class="header-bar">
         <img class="header-logo" src="./assets/icons/Logo.svg" alt="Logo" />
         <img type="button" />
-        <img class="menu-button"  onclick="openMenu()" src="./assets/icons/menu.svg" alt="" />
+        <img
+          class="menu-button"
+          onclick="openMenu()"
+          src="./assets/icons/menu.svg"
+          alt=""
+        />
       </div>
     </header>
 
-  <!-- Main Content -->
-  <section class="main-layout">
-  <section class="content"> 
-    <section class="header-picture">
-      <figure>
-        <img onclick="openMenu()"
-          class="burger-img"
-          src="./assets/img/Burger-House-img.png"
-          alt="AnzeigeBild BurgerHouse"
-        />
-      </figure>
-    </section>
-    <figure class="burger-house">
-      <img
-        src="./assets/img/Frame 58.svg"
-        alt="Name und Bwertung BurgerHouse"
-      />
-    </figure>
-    <section class="orange-line">
-      <img
-        class="burger-vec"
-        src="./assets/icons/Burger-vektor.svg"
-        alt="Burger"
-      />
-      <h2>Burger & Sandwiches</h2>
-    </section>
+    <!-- Main Content -->
+    <section class="main-layout">
+      <section class="content">
+        <section class="header-picture">
+          <figure>
+            <img
+              onclick="openMenu()"
+              class="burger-img"
+              src="./assets/img/Burger-House-img.png"
+              alt="AnzeigeBild BurgerHouse"
+            />
+          </figure>
+        </section>
+        <figure class="burger-house">
+          <img
+            src="./assets/img/Frame 58.svg"
+            alt="Name und Bwertung BurgerHouse"
+          />
+        </figure>
+        <section class="orange-line">
+          <img
+            class="burger-vec"
+            src="./assets/icons/Burger-vektor.svg"
+            alt="Burger"
+          />
+          <h2>Burger & Sandwiches</h2>
+        </section>
 
-    <div id="burgerList"></div>
-    <section class="orange-line">
-      <img class="burger-vec" src="./assets/icons/Pizza.svg" alt="Pizza" />
-      <h2>Pizza (30cm)</h2>
-    </section>
-    <div id="pizzaList"></div>
-    <section class="orange-line">
-      <img class="burger-vec" src="./assets/icons/Salad.svg" alt="Burger" />
-      <h2>Salad</h2>
-    </section>
+        <div id="burgerList"></div>
+        <section class="orange-line">
+          <img class="burger-vec" src="./assets/icons/Pizza.svg" alt="Pizza" />
+          <h2>Pizza (30cm)</h2>
+        </section>
+        <div id="pizzaList"></div>
+        <section class="orange-line">
+          <img class="burger-vec" src="./assets/icons/Salad.svg" alt="Burger" />
+          <h2>Salad</h2>
+        </section>
 
-    <div id="saladList"></div>
-  </section>
-<!-- Basket Wrapper -->
-  <section class="basket-wrapper">
-  <div class="open-Menu" id="openMenu"> 
-    <h5>Your Basket</h5>
-  </div>
-</section>
-</section>   
+        <div id="saladList"></div>
+      </section>
+      <!-- Basket Wrapper -->
+      <section class="basket-wrapper">
+        <div class="open-Menu" id="openMenu">
+          <h5>Your Basket</h5>
+        </div>
+          <div id="MealName"></div>
+      </section>
+    </section>
     <footer>
       <p>&copy; BurgerHouse</p>
       <p>Imprint</p>
       <p>Cookie Preferences</p>
     </footer>
-     <script src="./script.js"></script>
+    <script src="./script.js"></script>
+    <script src="./scripts/basket.js"></script>
   </body>
 </html>

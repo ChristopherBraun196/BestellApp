@@ -3,7 +3,7 @@
 }
 @font-face {
   font-family: "Palanquin";
-  src: url(/assets/fonts/Palanquin/Palanquin-Regular.ttf);
+  src: url(../assets/fonts/Palanquin/Palanquin-Regular.ttf);
 }
 
 :root {

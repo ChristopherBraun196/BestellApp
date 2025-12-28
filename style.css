@@ -72,10 +72,10 @@ figure img {
   background-color: var(--color-background-dishes);
   padding: 20px;
   margin-top: 20px;
-  margin-inline: auto;
+  margin-inline: 65px;
   font-family: "Palanquin";
   border-radius: 18px;
-  max-width: 1250px;
+  max-width: 950px;
   gap: 20px;
   height: auto;
 }

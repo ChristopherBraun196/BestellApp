@@ -18,7 +18,7 @@ function DishCardTemplate(dish) {
           <button onclick="addToBasket(${
             dish.id
           })" class="dish-added" aria-label="Add to basket">
-            <img src="./assets/icons/buttonAddtoBasket.svg" alt="">
+            <img src="./assets/icons/AddBasket.svg" alt="">
           </button>
         </div>
       </div>

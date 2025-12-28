@@ -4,7 +4,7 @@
   background-color: var(--color-background-basket);
   color: white;
   right: 0;
-  width: 308px;
+  width: 325px;
   min-height: 400px;
   max-height: 600px;
   padding-bottom: 18px;
@@ -24,26 +24,50 @@ h4 {
   font-size: 28px;
 }
 
+strong {
+  padding-inline: 20px;
+}
+
+.overflow {
+  overflow-y: auto;
+  height: 370px;
+}
+
 .meal-list {
-  display: flex;
-  flex-direction: row;
-  margin-top: 12px;
-  border-radius: 8px;
-  background-color: white;
-  color: var(--color-background-basket);
-  margin-top: 8px;
-  margin-inline: 17px;
-  justify-content: space-between;
-  align-items: center;
-  width: auto;
-  height: 40px;
-  padding-left: 4px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    border-radius: 8px;
+    background-color: white;
+    color: var(--color-background-basket);
+    margin-top: 8px;
+    justify-content: space-around;
+    width: auto;
+    padding: 10px;
+    height: 80px;
+    padding-left: 8px;
+    margin: 20px;
+    align-items: center;
 }
 
 h5 {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .meal-list p {
   font-size: 14px;
+}
+
+.basketTotal {
+    display: flex;
+    margin-top: auto;
+    padding-top: 16px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.basket-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }

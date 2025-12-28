@@ -36,7 +36,6 @@
         <section class="header-picture">
           <figure>
             <img
-              onclick="openMenu()"
               class="burger-img"
               src="./assets/img/Burger-House-img.png"
               alt="AnzeigeBild BurgerHouse"
@@ -72,13 +71,15 @@
         <div id="saladList"></div>
       </section>
       <!-- Basket Wrapper -->
+
       <section class="basket-wrapper">
         <div class="open-Menu" id="openMenu">
           <h4>Your Basket</h4>
-          <div id="myMealList" >
-          <div class="meal-list"></div>         
+          <div class="overflow">
+            <div id="myMealList"></div>
+          </div>
+          <section id="basketTotal"></section>
         </div>
-          <div id="basketTotal"></div> 
       </section>
     </section>
     <footer>
@@ -86,6 +87,6 @@
       <p>Imprint</p>
       <p>Cookie Preferences</p>
     </footer>
-    <script src="./script.js"></script>   
+    <script src="./script.js"></script>
   </body>
 </html>

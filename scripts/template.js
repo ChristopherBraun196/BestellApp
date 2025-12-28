@@ -2,7 +2,9 @@ function DishCardTemplate(dish) {
   return `
     <div class="dishes-card">
       <div class="dish-img-wrap">
-        <img class="dish-cover" src="${dish.image}" alt="Cover von ${dish.name}">
+        <img class="dish-cover" src="${dish.image}" alt="Cover von ${
+    dish.name
+  }">
       </div>
 
       <div class="dish-info">
@@ -13,7 +15,9 @@ function DishCardTemplate(dish) {
 
         <div class="dish-actions">
           <div class="dish-price">${dish.price.toFixed(2)} €</div>
-          <button onclick="addToBasket(${dish.id})" class="dish-added" aria-label="Add to basket">
+          <button onclick="addToBasket(${
+            dish.id
+          })" class="dish-added" aria-label="Add to basket">
             <img src="./assets/icons/buttonAddtoBasket.svg" alt="">
           </button>
         </div>
@@ -22,15 +26,26 @@ function DishCardTemplate(dish) {
   `;
 }
 
-function myMealTemplate(basketItem){
-  const itemTotal = basketItem.price * basketItem.quantity;
-
-  return`
+function myMealTemplate(basketItem, itemTotal) {
+  return `
    <div class=" meal-list" >
-      <p> ${basketItem.quantity}x <p>
-      <h5>${basketItem.name}</h5>
-      <span>${basketItem.price.toFixed(2)} €</span>
+      <p> ${basketItem.quantity}x </p>
+      <h5>${basketItem.name} (${basketItem.price.toFixed(2)}€)</h5>
+      <span>${itemTotal.toFixed(2)} €</span>
      </div>
      
+    `;
+}
+
+function myTotalPrice(total) {
+  return `
+    <section class="basketTotal"> 
+      <div>
+        <strong>Liefergebühr:   </strong> ${deliveryPrice.toFixed(2)}€ 
+      </div>
+      <div>
+        <strong>Gesamtpreis:</strong> ${total.toFixed(2)}€
+      </div>
+    </section>    
     `;
 }

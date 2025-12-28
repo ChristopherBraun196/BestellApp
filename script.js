@@ -1,18 +1,13 @@
+const STORAGE_KEY_BASKET = "burgerhouse_basket";
+
 let basketList = [];
 
 function init() {
+  loadBasketFromLocalStorage();
   document.getElementById("burgerList").innerHTML = loadBurger(myDishesBurger);
   document.getElementById("pizzaList").innerHTML = loadPizza(myDishesPizza);
   document.getElementById("saladList").innerHTML = loadSalad(myDishesSalad);
   renderBasket();
-}
-
-function renderBasket() {
-  document.getElementById("myMealList").innerHTML =
-    loadBasket(basketList);
-
-  document.getElementById("basketTotal").innerHTML =
-    `<strong>Gesamt: ${getBasketTotal().toFixed(2)} €</strong>`;
 }
 
 function loadBurger(myDishesBurger) {
@@ -59,31 +54,71 @@ function openMenu() {
 
 // Basket
 
+function renderBasket() {
+  document.getElementById("myMealList").innerHTML = loadBasket(basketList);
+  renderBasketTotal();
+}
+
 function addToBasket(dishID) {
+  dishID = Number(dishID);
   const dish =
     myDishesBurger.find((d) => d.id === dishID) ||
     myDishesPizza.find((d) => d.id === dishID) ||
     myDishesSalad.find((d) => d.id === dishID);
 
-  if (dish) {
-    basketList.push(dish);
-    renderBasket();
+  if (!dish) return;
+
+  const existing = basketList.find((item) => item.id === dishID);
+
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    basketList.push({ ...dish, quantity: 1 });
   }
+  saveBasketToLocalStorage(); 
+  renderBasket();
 }
 
-function loadBasket(basketList) {
+function loadBasket(list) {
   let html = "";
 
-  for (let i = 0; i < basketList.length; i++) {
-    const basketItem = basketList[i];
-    html += myMealTemplate(basketItem);
+  for (let i = 0; i < list.length; i++) {
+    const basketItem = list[i];
+    const itemTotal = basketItem.price * basketItem.quantity;
+
+    html += myMealTemplate(basketItem, itemTotal);
   }
 
   return html;
 }
 
-function getBasketTotal(){
-  return basketList.reduce((sum, item)=>{
-    return sum + item.price * item.quantity;
-  }, 0);
+function basketTotal() {
+  let subtotal = 0;
+
+  for (let i = 0; i < basketList.length; i++) {
+    const item = basketList[i];
+    subtotal += item.price * item.quantity;
+  }
+
+  return subtotal + deliveryPrice;
 }
+
+function renderBasketTotal() {
+  const total = basketTotal();
+  document.getElementById("basketTotal").innerHTML = myTotalPrice(total);
+}
+
+function saveBasketToLocalStorage() {
+  localStorage.setItem(STORAGE_KEY_BASKET, JSON.stringify(basketList));
+}
+
+function loadBasketFromLocalStorage() {
+  const stored = localStorage.getItem(STORAGE_KEY_BASKET);
+
+  if (!stored)   
+  
+    return;
+
+    basketList = JSON.parse(stored);
+}
+

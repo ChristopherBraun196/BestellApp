@@ -142,11 +142,11 @@ function showOrderSuccess() {
 }
 
 function saveBasketToLocalStorage() {
-  localStorage.setItem(STORAGE_KEY_BASKET, JSON.stringify(basketList));
+  localStorage.setItem("burgerhouse_basket", JSON.stringify(basketList));
 }
 
 function loadBasketFromLocalStorage() {
-  const stored = localStorage.getItem(STORAGE_KEY_BASKET);
+  const stored = localStorage.getItem("burgerhouse_basket");
   if (!stored) return;
   basketList = JSON.parse(stored);
 }

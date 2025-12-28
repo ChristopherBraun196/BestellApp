@@ -49,7 +49,7 @@ function loadSalad(myDishesSalad) {
 function openMenu() {
   let overlay = document.getElementById("openMenu");
 
-  overlay.classList.toggle("d-block");
+  overlay.classList.toggle("isHidden");
 }
 
 // Basket
@@ -108,6 +108,27 @@ function renderBasketTotal() {
   document.getElementById("basketTotal").innerHTML = myTotalPrice(total);
 }
 
+function buyNow() {
+  if (basketList.length === 0) {
+    alert("Dein Warenkorb ist leer!");
+    return;
+  }
+
+  clearBasket();
+  showOrderSuccess();
+}
+
+function clearBasket() {
+  basketList = [];
+  localStorage.removeItem(STORAGE_KEY_BASKET);
+  renderBasket();
+}
+
+function closeOrderDialog(){
+  document.getElementById("orderDialog").classList.add("d-none");
+}
+
+
 function saveBasketToLocalStorage() {
   localStorage.setItem(STORAGE_KEY_BASKET, JSON.stringify(basketList));
 }
@@ -121,4 +142,5 @@ function loadBasketFromLocalStorage() {
 
     basketList = JSON.parse(stored);
 }
+
 

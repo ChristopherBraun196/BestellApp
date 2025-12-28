@@ -29,7 +29,7 @@ function DishCardTemplate(dish) {
 function myMealTemplate(basketItem, itemTotal) {
   return `
    <div class=" meal-list" >
-      <p> ${basketItem.quantity}x </p>
+      <p class="number"> ${basketItem.quantity}x </p>
       <h5>${basketItem.name} (${basketItem.price.toFixed(2)}€)</h5>
       <span>${itemTotal.toFixed(2)} €</span>
      </div>
@@ -48,4 +48,17 @@ function myTotalPrice(total) {
       </div>
     </section>    
     `;
+}
+
+function showOrderSuccess() {
+  const dialog = document.getElementById("orderDialog");
+
+  dialog.innerHTML = `
+    <div class="order-dialog-content">
+      <img class="confirm" src="./assets/img/Confirmation.svg" alt="Bestellung erfolgreich">      
+        <button class= "buyButton" onclick="closeOrderDialog()">Schließen</button>
+    </div>
+  `;
+
+  dialog.classList.remove("d-none");
 }

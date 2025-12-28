@@ -1,6 +1,6 @@
 .open-Menu {
   position: fixed;
-  top: 400px; /* Headerhöhe */
+  top: 400px;
   background-color: var(--color-background-basket);
   color: white;
   right: 0;
@@ -10,12 +10,12 @@
   padding-bottom: 18px;
   border-radius: 30px 0px 0px 30px;
   overflow-y: auto;
-  transform: translateX(110%);
-  transition: transform 250ms ease;
-  z-index: 9999;
-}
-.open-Menu.d-block {
   transform: translateX(0);
+  transition: transform 250ms ease;
+  z-index: 1;
+}
+.open-Menu.isHidden {
+  transform: translateX(110%);
 }
 
 h4 {
@@ -26,6 +26,7 @@ h4 {
 
 strong {
   padding-inline: 20px;
+  font-family: "Palanquin";
 }
 
 .overflow {
@@ -34,40 +35,104 @@ strong {
 }
 
 .meal-list {
-    display: flex;
-    flex-direction: column;
-    margin-top: 12px;
-    border-radius: 8px;
-    background-color: white;
-    color: var(--color-background-basket);
-    margin-top: 8px;
-    justify-content: space-around;
-    width: auto;
-    padding: 10px;
-    height: 80px;
-    padding-left: 8px;
-    margin: 20px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  border-radius: 8px;
+  background-color: white;
+  color: var(--color-background-basket);
+  margin-top: 8px;
+  justify-content: space-around;
+  width: auto;
+  padding: 10px;
+  height: 80px;
+  padding-left: 8px;
+  margin: 20px;
+  align-items: center;
+  font-family: "Palanquin";
+}
+
+#myMealList {
+  font-family: "Palanquin";
 }
 
 h5 {
-  font-size: 12px;
+  font-size: 16px;
+  font-family: "Palanquin";
 }
 
 .meal-list p {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .basketTotal {
-    display: flex;
-    margin-top: auto;
-    padding-top: 16px;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  margin-top: auto;
+  padding-top: 16px;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Palanquin";
 }
 
 .basket-wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.number {
+  font-family: "Palanquin";
+}
+
+.buyToButton {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.buyButton {
+  font-family: "Palanquin";
+  background-color: var(--color-background-header);   
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 18px;
+  height: 50px;
+  width: 120px;
+}
+
+.buyButton:hover {
+  scale: calc(1.1);
+  cursor: pointer;
+}
+
+
+.order-dialog{
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.order-dialog-content{
+  background: none;
+  padding: 32px;
+  border-radius: 18px;
+  text-align: center;
+  max-width: 420px;
+}
+
+.order-dialog-content img{
+    width: 420px;
+    margin-bottom: 17px;
+}
+
+.d-none{
+  display: none;
+}
+
+.confirm{
+  width: 500px;
 }

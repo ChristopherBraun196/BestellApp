@@ -106,5 +106,3 @@ let myDishesSalad = [
       "Green salad, Cherry tomatoes, Cucumber, Baby spinach, Edamame, Radishes, Bittercress, Tofu, Peanuts",
   },
 ];
-
-let deliveryPrice = 5.0;

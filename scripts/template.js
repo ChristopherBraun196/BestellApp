@@ -26,15 +26,27 @@ function DishCardTemplate(dish) {
   `;
 }
 
-function myMealTemplate(basketItem, itemTotal) {
+function myMealTemplate(basketItem, itemTotal, index) {
   return `
-   <div class=" meal-list" >
-      <p class="number"> ${basketItem.quantity}x </p>
-      <h5>${basketItem.name} (${basketItem.price.toFixed(2)}€)</h5>
-      <span>${itemTotal.toFixed(2)} €</span>
-     </div>
-     
-    `;
+    <div class="meal-list">
+      <span class="number">${basketItem.quantity}x</span>
+
+      <span class="meal-name">${basketItem.name}</span>
+
+      <div class="meal-actions">
+        <span class="meal-price">
+          (${basketItem.price.toFixed(2)}€) ${itemTotal.toFixed(2)} €
+        </span>
+
+        <img
+          src="./assets/icons/delete.svg"
+          alt="Artikel löschen"
+          class="delete-icon"
+          onclick="deleteBasket(${index})"
+        />
+      </div>
+    </div>
+  `;
 }
 
 function myTotalPrice(total) {
@@ -50,15 +62,17 @@ function myTotalPrice(total) {
     `;
 }
 
-function showOrderSuccess() {
-  const dialog = document.getElementById("orderDialog");
-
-  dialog.innerHTML = `
+function orderSuccessTemplate() {
+  return `
     <div class="order-dialog-content">
-      <img class="confirm" src="./assets/img/Confirmation.svg" alt="Bestellung erfolgreich">      
-        <button class= "buyButton" onclick="closeOrderDialog()">Schließen</button>
+      <img
+        class="confirm"
+        src="./assets/img/Confirmation.svg"
+        alt="Bestellung erfolgreich"
+      >
+      <button class="buyButton" onclick="closeOrderDialog()">
+        Schließen
+      </button>
     </div>
   `;
-
-  dialog.classList.remove("d-none");
 }

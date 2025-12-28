@@ -1,6 +1,7 @@
 * {
   margin: 0;
 }
+
 @font-face {
   font-family: "Palanquin";
   src: url(../assets/fonts/Palanquin/Palanquin-Regular.ttf);
@@ -31,6 +32,7 @@
 .menu-img {
   width: 80px;
 }
+
 .orange-line {
   margin-top: 100px;
   display: flex;
@@ -39,8 +41,9 @@
   align-items: flex-end;
   padding-inline: 190px;
   background: var(--color-background-header);
-  height: 65px;
+  height: 65px;  
 }
+
 .orange-line h2 {
   padding-left: 5px;
   font-size: 45px;
@@ -71,16 +74,4 @@ footer {
 footer :hover {
   scale: calc(1.2);
   cursor: pointer;
-}
-
-@media (min-width: 3000px) and (max-width: 7200px) {
-  .widthScreen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
-    text-align: center;
-  }
 }

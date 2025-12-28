@@ -1,6 +1,7 @@
 const STORAGE_KEY_BASKET = "burgerhouse_basket";
 
 let basketList = [];
+let deliveryPrice = 5.0;
 
 function init() {
   loadBasketFromLocalStorage();
@@ -75,7 +76,7 @@ function addToBasket(dishID) {
   } else {
     basketList.push({ ...dish, quantity: 1 });
   }
-  saveBasketToLocalStorage(); 
+  saveBasketToLocalStorage();
   renderBasket();
 }
 
@@ -110,7 +111,6 @@ function renderBasketTotal() {
 
 function buyNow() {
   if (basketList.length === 0) {
-    alert("Dein Warenkorb ist leer!");
     return;
   }
 
@@ -124,10 +124,22 @@ function clearBasket() {
   renderBasket();
 }
 
-function closeOrderDialog(){
+function closeOrderDialog() {
   document.getElementById("orderDialog").classList.add("d-none");
 }
 
+function deleteBasket(index) {
+  basketList.splice(index, 1);
+  saveBasketToLocalStorage();
+  renderBasket();
+}
+
+function showOrderSuccess() {
+  const dialog = document.getElementById("orderDialog");
+
+  dialog.innerHTML = orderSuccessTemplate();
+  dialog.classList.remove("d-none");
+}
 
 function saveBasketToLocalStorage() {
   localStorage.setItem(STORAGE_KEY_BASKET, JSON.stringify(basketList));
@@ -135,12 +147,6 @@ function saveBasketToLocalStorage() {
 
 function loadBasketFromLocalStorage() {
   const stored = localStorage.getItem(STORAGE_KEY_BASKET);
-
-  if (!stored)   
-  
-    return;
-
-    basketList = JSON.parse(stored);
+  if (!stored) return;
+  basketList = JSON.parse(stored);
 }
-
-

@@ -14,6 +14,7 @@
   transition: transform 250ms ease;
   z-index: 1;
 }
+
 .open-Menu.isHidden {
   transform: translateX(110%);
 }
@@ -36,41 +37,45 @@ strong {
 
 .meal-list {
   display: flex;
-  flex-direction: column;
-  margin-top: 12px;
-  border-radius: 8px;
-  background-color: white;
+  align-items: flex-start;
+  gap: 12px;
   color: var(--color-background-basket);
-  margin-top: 8px;
-  justify-content: space-around;
-  width: auto;
-  padding: 10px;
-  height: 80px;
-  padding-left: 8px;
-  margin: 20px;
-  align-items: center;
-  font-family: "Palanquin";
+  background-color: var(--color-background-dishes);
+  border-radius: 18px;
+  padding: 14px 16px;
+  margin: 12px 18px;
+}
+
+.meal-list .number {
+  font-weight: 800;
+  min-width: 32px;
+}
+
+.meal-name{
+  flex: 1;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.meal-actions{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-height: 48px;
+}
+
+.meal-price{
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.delete-icon:hover{
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 #myMealList {
-  font-family: "Palanquin";
-}
-
-h5 {
-  font-size: 16px;
-  font-family: "Palanquin";
-}
-
-.meal-list p {
-  font-size: 18px;
-}
-
-.basketTotal {
-  display: flex;
-  margin-top: auto;
-  padding-top: 16px;
-  flex-direction: column;
-  align-items: center;
   font-family: "Palanquin";
 }
 
@@ -92,7 +97,7 @@ h5 {
 
 .buyButton {
   font-family: "Palanquin";
-  background-color: var(--color-background-header);   
+  background-color: var(--color-background-dishes);
   font-size: 20px;
   font-weight: bold;
   border-radius: 18px;
@@ -105,18 +110,17 @@ h5 {
   cursor: pointer;
 }
 
-
-.order-dialog{
+.order-dialog {
   position: fixed;
   inset: 0;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
 }
 
-.order-dialog-content{
+.order-dialog-content {
   background: none;
   padding: 32px;
   border-radius: 18px;
@@ -124,15 +128,15 @@ h5 {
   max-width: 420px;
 }
 
-.order-dialog-content img{
-    width: 420px;
-    margin-bottom: 17px;
+.order-dialog-content img {
+  width: 420px;
+  margin-bottom: 17px;
 }
 
-.d-none{
+.d-none {
   display: none;
 }
 
-.confirm{
+.confirm {
   width: 500px;
 }

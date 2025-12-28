@@ -17,10 +17,16 @@
   display: flex;
   align-items: flex-start;
 }
+.container{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 35px;
+  box-sizing: border-box;
+}
 
 .content {
   flex: 1;
-  width: calc(100% - 250px);
+  width: auto;
   overflow-y: auto;
 }
 
@@ -39,9 +45,16 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
-  padding-inline: 190px;
+  /* padding-inline: 190px; */
   background: var(--color-background-header);
   height: 65px;  
+  width: 100%;
+}
+
+.orange-inner{
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
 }
 
 .orange-line h2 {

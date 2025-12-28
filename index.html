@@ -28,49 +28,73 @@
         />
       </div>
     </header>
-
-    <!-- Main Content -->
     <section class="main-layout">
       <section class="content">
-        <section class="header-picture">
-          <figure>
+        <div class="container">
+          <section class="header-picture">
+            <figure>
+              <img
+                class="burger-img"
+                src="./assets/img/Burger-House-img.png"
+                alt="AnzeigeBild BurgerHouse"
+              />
+            </figure>
+          </section>
+          <figure class="burger-house">
             <img
-              class="burger-img"
-              src="./assets/img/Burger-House-img.png"
-              alt="AnzeigeBild BurgerHouse"
+              src="./assets/img/Frame 58.svg"
+              alt="Name und Bewertung BurgerHouse"
             />
           </figure>
-        </section>
-        <figure class="burger-house">
-          <img
-            src="./assets/img/Frame 58.svg"
-            alt="Name und Bwertung BurgerHouse"
-          />
-        </figure>
+        </div>
+
         <section class="orange-line">
-          <img
-            class="burger-vec"
-            src="./assets/icons/Burger-vektor.svg"
-            alt="Burger"
-          />
-          <h2>Burger & Sandwiches</h2>
+          <div class="container orange-inner">
+            <img
+              class="burger-vec"
+              src="./assets/icons/Burger-vektor.svg"
+              alt="Burger"
+            />
+            <h2>Burger & Sandwiches</h2>
+          </div>
         </section>
 
-        <div id="burgerList"></div>
+        <div class="container">
+          <div id="burgerList"></div>
+        </div>
+
         <section class="orange-line">
-          <img class="burger-vec" src="./assets/icons/Pizza.svg" alt="Pizza" />
-          <h2>Pizza (30cm)</h2>
-        </section>
-        <div id="pizzaList"></div>
-        <section class="orange-line">
-          <img class="burger-vec" src="./assets/icons/Salad.svg" alt="Burger" />
-          <h2>Salad</h2>
+          <div class="container orange-inner">
+            <img
+              class="burger-vec"
+              src="./assets/icons/Pizza.svg"
+              alt="Pizza"
+            />
+            <h2>Pizza (30cm)</h2>
+          </div>
         </section>
 
-        <div id="saladList"></div>
+        <div class="container">
+          <div id="pizzaList"></div>
+        </div>
+
+        <section class="orange-line">
+          <div class="container orange-inner">
+            <img
+              class="burger-vec"
+              src="./assets/icons/Salad.svg"
+              alt="Salad"
+            />
+            <h2>Salad</h2>
+          </div>
+        </section>
+
+        <div class="container">
+          <div id="saladList"></div>
+        </div>
       </section>
-      <!-- Basket Wrapper -->
 
+      <!-- Basket Wrapper -->
       <section class="basket-wrapper">
         <div class="open-Menu" id="openMenu">
           <h4>Your Basket</h4>
@@ -82,10 +106,10 @@
             <button onclick="buyNow()" class="buyButton">Buy now</button>
           </section>
         </div>
-
         <div id="orderDialog" class="order-dialog d-none"></div>
       </section>
     </section>
+
     <footer>
       <p>&copy; BurgerHouse</p>
       <p>Imprint</p>

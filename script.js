@@ -120,7 +120,7 @@ function buyNow() {
 
 function clearBasket() {
   basketList = [];
-  localStorage.removeItem(STORAGE_KEY_BASKET);
+  localStorage.removeItem("burgerhouse_basket");
   renderBasket();
 }
 

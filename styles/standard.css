@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "Palanquin";
   src: url(../assets/fonts/Palanquin/Palanquin-Regular.ttf);
@@ -90,4 +94,12 @@ footer {
 footer :hover {
   scale: calc(1.2);
   cursor: pointer;
+}
+
+.footer-Bar{
+  background-color: var(--color-background-basket);
+}
+
+.footer-Bar{
+  display: none;
 }

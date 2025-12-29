@@ -21,6 +21,10 @@
     flex-direction: row;
   }
 
+  .main-layout {
+    padding:0 20px
+  }
+
   .header-bar {
     justify-content: center;
   }
@@ -71,6 +75,7 @@
     height: auto;
     flex-direction: column;
     flex-wrap: wrap;
+    box-sizing: border-box;
   }
   .dish-cover {
     display: block;
@@ -132,7 +137,7 @@
     position: fixed;
     bottom: 0;
     right: max(12px, calc((100vw - 1440px) / 2));
-    transform: translateY(45%);
+    transform: translateY(40%);
     transition: transform 250ms ease;
     background-color: var(--color-background-basket);
     color: white;
@@ -207,6 +212,6 @@
 
 @media (max-width: 600px) {
   .dishes-card {
-    outline: 3px solid red;
+    border: 3px solid red;
   }
 }

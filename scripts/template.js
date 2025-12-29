@@ -29,21 +29,38 @@ function DishCardTemplate(dish) {
 function myMealTemplate(basketItem, itemTotal, index) {
   return `
     <div class="meal-list">
-      <span class="number">${basketItem.quantity}x</span>
+      <div class="meal-top">
+        <div class="meal-title">
+          <span class="qty">${basketItem.quantity} x</span>
+          <span class="meal-name">${basketItem.name}</span>
+        </div>
 
-      <span class="meal-name">${basketItem.name}</span>
+        <div class="meal-price">(${basketItem.price.toFixed(
+          2
+        )}€) ${itemTotal.toFixed(2)} €</div>
+      </div>
 
-      <div class="meal-actions">
-        <span class="meal-price">
-          (${basketItem.price.toFixed(2)}€) ${itemTotal.toFixed(2)} €
-        </span>
-
-        <img
-          src="./assets/icons/delete.svg"
-          alt="Artikel löschen"
-          class="delete-icon"
-          onclick="deleteBasket(${index})"
-        />
+      <div class="meal-bottom">
+        <div class="meal-controls">
+         <img
+            src="./assets/icons/+.svg"
+            alt="Eins hinzufügen"
+            class="add-icon"
+            onclick="addToBasket(${basketItem.id})"
+          />
+          <img
+            src="./assets/icons/-.svg"
+            alt="Eins entfernen"
+            class="delete-icon"
+            onclick="deleteBasket(${index})"
+          /> 
+              <img
+            src="./assets/icons/delete.svg"
+            alt="Eins entfernen"
+            class="trash-icon"
+            onclick="deleteBasketAll(${index})"
+          /> 
+        </div>
       </div>
     </div>
   `;
@@ -51,7 +68,8 @@ function myMealTemplate(basketItem, itemTotal, index) {
 
 function myTotalPrice(total) {
   return `
-    <section class="basketTotal"> 
+    <section class="basketPrice"> 
+    <hr>
       <div>
         <strong>Liefergebühr:   </strong> ${deliveryPrice.toFixed(2)}€ 
       </div>

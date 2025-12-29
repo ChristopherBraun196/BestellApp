@@ -87,7 +87,7 @@ function loadBasket(list) {
     const basketItem = list[i];
     const itemTotal = basketItem.price * basketItem.quantity;
 
-    html += myMealTemplate(basketItem, itemTotal);
+    html += myMealTemplate(basketItem, itemTotal, i);
   }
 
   return html;
@@ -129,7 +129,21 @@ function closeOrderDialog() {
 }
 
 function deleteBasket(index) {
+  const item = basketList[index];
+
+  if (item.quantity > 1) {
+    item.quantity -= 1;
+  } else {
+    basketList.splice(index, 1);
+  }
+
+  saveBasketToLocalStorage();
+  renderBasket();
+}
+
+function deleteBasketAll(index) {
   basketList.splice(index, 1);
+
   saveBasketToLocalStorage();
   renderBasket();
 }

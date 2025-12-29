@@ -36,43 +36,79 @@ strong {
 }
 
 .meal-list {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
   color: var(--color-background-basket);
   background-color: var(--color-background-dishes);
   border-radius: 18px;
-  padding: 14px 16px;
+
+  padding: 18px 18px;
   margin: 12px 18px;
-}
 
-.meal-list .number {
-  font-weight: 800;
-  min-width: 32px;
-}
-
-.meal-name{
-  flex: 1;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.meal-actions{
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
-  min-height: 48px;
+  gap: 14px;
 }
 
-.meal-price{
+.meal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.meal-title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.meal-title .qty {
   font-weight: 900;
   white-space: nowrap;
 }
 
-.delete-icon:hover{
-  opacity: 1;
-  transform: scale(1.1);
+.meal-name {
+  font-weight: 900;
+  line-height: 1.15;
+
+  word-break: break-word;
+}
+
+.meal-price {
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.meal-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meal-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delete-icon,
+.add-icon {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  transition: transform 120ms ease;
+}
+
+.delete-icon:hover,
+.add-icon:hover,
+.trash-icon:hover {
+  transform: scale(1.08);
+}
+
+.ctrl-text {
+  font-weight: 900;
+  white-space: nowrap;
 }
 
 #myMealList {
@@ -139,4 +175,19 @@ strong {
 
 .confirm {
   width: 500px;
+}
+
+.basketPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Palanquin";
+  font-weight: bold;
+  font-size: 18px;
+}
+
+hr {
+  width: 85%;
+  text-align: center;
+  margin-left: 0;
 }

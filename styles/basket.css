@@ -3,7 +3,7 @@
   top: 400px;
   background-color: var(--color-background-basket);
   color: white;
-  right: 0;
+  right: max(0px, calc((100vw - 1440px) / 2));
   width: 325px;
   min-height: 400px;
   max-height: 600px;

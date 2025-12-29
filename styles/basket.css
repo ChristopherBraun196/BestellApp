@@ -16,7 +16,7 @@
 }
 
 .open-Menu.isHidden {
-  transform: translateX(110%);
+  transform: translateX(350%);
 }
 
 h4 {

@@ -184,37 +184,33 @@ hr {
   margin-left: 0;
 }
 
-@media (max-width:800px){
+@media (max-width: 800px) {
   .open-Menu {
-    top: 315px;
-}
+    top: 415px;;
+  }
 
   #myMealList {
     height: 375px;
+  }
 }
-}
-
 
 @media (max-width: 550px) {
- .open-Menu {
-   
+  .open-Menu {
     left: 50%;
     bottom: 0;
-    top: 195px;    
-    width: 285px;    
+    top: 195px;
+    width: 285px;
     max-height: 400px;
     padding-bottom: 18px;
-    border-radius: 30px 30px 30px 30px;    
+    border-radius: 30px 30px 30px 30px;
     transform: translateX(-50%) translateY(0);
     transition: transform 700ms ease;
     z-index: 1;
   }
 
-  
   .open-Menu.isHidden {
     transform: translateX(-50%) translateY(300%);
   }
-
 
   .meal-list {
     color: var(--color-background-basket);
@@ -229,15 +225,17 @@ hr {
   }
 
   #myMealList {
-    
     height: 230px;
-}
-
+  }
 
   .order-dialog-content img {
     width: 280px;
     margin-bottom: -25px;
   }
-
 }
 
+@media (max-width: 375px) {
+  .open-Menu {
+    top: 160px;
+  }
+}

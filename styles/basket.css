@@ -184,7 +184,18 @@ hr {
   margin-left: 0;
 }
 
-@media (max-width: 450px) {
+@media (max-width:800px){
+  .open-Menu {
+    top: 315px;
+}
+
+  #myMealList {
+    height: 375px;
+}
+}
+
+
+@media (max-width: 550px) {
  .open-Menu {
    
     left: 50%;

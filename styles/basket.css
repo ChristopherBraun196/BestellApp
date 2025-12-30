@@ -8,7 +8,7 @@
   min-height: 400px;
   max-height: 600px;
   padding-bottom: 18px;
-  border-radius: 30px 0px 0px 30px; 
+  border-radius: 30px 0px 0px 30px;
   transform: translateX(0);
   transition: transform 250ms ease;
   z-index: 1;
@@ -29,25 +29,21 @@ strong {
   font-family: "Palanquin";
 }
 
-
 .meal-list {
   color: var(--color-background-basket);
   background-color: var(--color-background-dishes);
   border-radius: 18px;
-
-  padding: 18px 18px;
-  margin: 12px 18px;
-
+  padding: 2px 6px;
+  margin: 6px 4px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
 }
 
 .meal-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .meal-title {
@@ -65,8 +61,7 @@ strong {
 
 .meal-name {
   font-weight: 900;
-  line-height: 1.15;
-
+  line-height: 1;
   word-break: break-word;
 }
 
@@ -108,6 +103,8 @@ strong {
 
 #myMealList {
   font-family: "Palanquin";
+  overflow-y: auto;
+  height: 410px;
 }
 
 .basket-wrapper {
@@ -160,8 +157,8 @@ strong {
 }
 
 .order-dialog-content img {
-  width: 420px;
-  margin-bottom: 17px;
+  width: 425px;
+  margin-bottom: -25px;
 }
 
 .d-none {

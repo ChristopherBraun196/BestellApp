@@ -31,7 +31,7 @@ function myMealTemplate(basketItem, itemTotal, index) {
     <div class="meal-list">
       <div class="meal-top">
         <div class="meal-title">
-          <span class="qty">${basketItem.quantity} x</span>
+          <span class="qty">${basketItem.quantity}x</span>
           <span class="meal-name">${basketItem.name}</span>
         </div>
 

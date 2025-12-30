@@ -51,6 +51,16 @@ html {
   width: 120px;
 }
 
+.header-basket{
+  width: 55px;
+}
+
+.header-logo:hover,
+.header-basket:hover{
+   scale: calc(1.15);
+  cursor: pointer;
+}
+
 figure {
   display: flex;
   align-content: center;

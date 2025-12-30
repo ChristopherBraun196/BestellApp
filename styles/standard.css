@@ -25,14 +25,14 @@ h1 {
 }
 
 .header-container {
-  background-image: url(../assets/img/header-img.png);
   height: 60vh;
   position: relative;
   background-size: cover;
   background-position: bottom;
   font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  margin-bottom: 313px;
+  font-weight: bold; 
+  max-width: 1440px;
+  margin: auto;
 }
 
 .header-bar {
@@ -52,6 +52,8 @@ h1 {
   flex-wrap: nowrap;
   flex-direction: row;
   padding-inline: 50px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .header-logo {
@@ -68,6 +70,13 @@ h1 {
   cursor: pointer;
 }
 
+.main-container {
+  max-width: 1440px;
+  margin: auto;
+  width: 100vh;
+}
+
+
 figure {
   display: flex;
   align-content: center;
@@ -78,7 +87,7 @@ figure {
 .burger-img {
   width: 250px;
   border-radius: 100%;
-  transform: translate(0px, 50%);
+  transform: translate(0px, -165%);
   position: absolute;
   bottom: 0;
 }
@@ -100,12 +109,12 @@ h6 {
 }
 
 .burger-house {
-  padding-top: 880px;
   display: flex;
   font-family: "Palanquin";
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 85px;
 }
 
 .stars {
@@ -175,6 +184,13 @@ footer :hover {
   display: none;
 }
 
+.footer-ws {
+  display: flex;
+  gap: 25px;
+  max-width: 1440px;
+  margin: auto;
+}
+
 @media (max-width: 900px) {
   h1 {
     margin-top: -60px;
@@ -186,10 +202,10 @@ footer :hover {
     text-align: center;
   }
 
- .stars {
+  .stars {
     margin-top: 80px;
     padding-bottom: 30px;
-}
+  }
   .burger-house {
     padding-top: 825px;
   }
@@ -215,7 +231,6 @@ footer :hover {
     align-content: space-around;
   }
 }
-
 
 @media (max-width: 450px) {
   .header-basket {
@@ -243,9 +258,9 @@ footer :hover {
     text-align: center;
   }
 
-     .stars {
-        margin-top: 19px;
-    }
+  .stars {
+    margin-top: 19px;
+  }
 
   .burger-house {
     padding-top: 880px;

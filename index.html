@@ -11,91 +11,74 @@
     />
     <script src="./scripts/db.js"></script>
     <script src="./scripts/template.js"></script>
-
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/standard.css" />
-    <link rel="stylesheet" href="./styles/basket.css" />
-    <link rel="stylesheet" href="./styles/mediaquery.css" />
+    <link rel="stylesheet" href="./styles/basket.css" />   
   </head>
   <body onload="init()">
-    <header>
-      <div class="header-bar">
-        <img class="header-logo" src="./assets/icons/Logo.svg" alt="Logo" />
-        <img
-          class="menu-button"
-          onclick="openMenu()"
-          src="./assets/icons/trolley.svg"
-          alt=""
-        />
-      </div>
+    <header class="header-bar">
+        <nav class="menu-head">
+          <a href="#">
+            <img
+              class="header-logo"              
+              src="./assets/icons/Logo.svg"
+              alt="header-logo"
+            />
+          </a>
+          <a class="menu-button" onclick="openMenu()">
+            <img src="./assets/icons/trolley.svg" alt="Warenkorb öffnen" />
+          </a>
+        </nav>
     </header>
-    <section class="main-layout">
-      <section class="content">
-        <div class="container">
-          <section class="header-picture">
-            <figure>
-              <img
-                class="burger-img"
-                src="./assets/img/Burger-House-img.png"
-                alt="AnzeigeBild BurgerHouse"
-              />
-            </figure>
-          </section>
-          <figure class="burger-house">
-            <img
-              src="./assets/img/Frame 58.svg"
-              alt="Name und Bewertung BurgerHouse"
-            />
-          </figure>
-        </div>
+    <section class="header-container">      
+      <div class="main-container">
+        <figure>
+          <img
+            class="burger-img"
+            src="./assets/img/Burger-House-img.png"
+            alt="AnzeigeBild BurgerHouse"
+          />
+          <img class="burger-house-img"
+            src="./assets/img/Frame 58.svg"
+            alt="Name und Bewertung BurgerHouse"
+          />
+        </figure>
+      </div>
+    </section>
+    <section>
+      <div class="orange-line orange-inner">
+       <img class="menu-vec" 
+          src="./assets/icons/Burger-vektor.svg" 
+          alt="Burger"/> 
+       <h2>Burger & Sandwiches</h2> 
+      </div> 
 
-        <section class="orange-line">
-          <div class="container orange-inner">
-            <img
-              class="burger-vec"
-              src="./assets/icons/Burger-vektor.svg"
-              alt="Burger"
-            />
-            <h2>Burger & Sandwiches</h2>
-          </div>
-        </section>
+      <div id="burgerList"></div>
+    </section>
 
-        <div class="container">
-          <div id="burgerList"></div>
-        </div>
+    <section>
+      <div class="orange-line orange-inner">
+       <img class="menu-vec" 
+          src="./assets/icons/Pizza.svg" 
+          alt="Pizza"/> 
+       <h2>Pizza (30cm)</h2> 
+      </div> 
 
-        <section class="orange-line">
-          <div class="container orange-inner">
-            <img
-              class="burger-vec"
-              src="./assets/icons/Pizza.svg"
-              alt="Pizza"
-            />
-            <h2>Pizza (30cm)</h2>
-          </div>
-        </section>
+      <div id="pizzaList"></div>
+    </section>
 
-        <div class="container">
-          <div id="pizzaList"></div>
-        </div>
+      <section>
+        <div class="orange-line orange-inner">
+          <img class="menu-vec" 
+            src="./assets/icons/Salad.svg" 
+            alt="Salat"/> 
+          <h2>Salad</h2> 
+        </div> 
 
-        <section class="orange-line">
-          <div class="container orange-inner">
-            <img
-              class="burger-vec"
-              src="./assets/icons/Salad.svg"
-              alt="Salad"
-            />
-            <h2>Salad</h2>
-          </div>
-        </section>
-
-        <div class="container">
-          <div id="saladList"></div>
-        </div>
-      </section>
-
-      <section class="basket-wrapper">
+      <div id="saladList"></div>
+    </section>
+    
+    <section class="basket-wrapper">
         <div class="open-Menu" id="openMenu">
           <h4>Your Basket</h4>
           <div class="overflow">
@@ -125,7 +108,17 @@
           <img src="./assets/icons/trolley.svg" alt="Warenkorb öffnen" />
         </a>
       </nav>
-    </section>
+    </section> 
     <script src="./script.js"></script>
   </body>
 </html>
+
+
+
+
+      
+
+
+
+
+   

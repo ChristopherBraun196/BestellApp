@@ -17,45 +17,76 @@ html {
   --color-background-basket: #363534;
 }
 
-.main-layout {
+.header-container {
+  background-image: url(../assets/img/header-img.png);
+  height: 60vh;
+  position: relative;
+  background-size: cover;
+  background-position: bottom;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  margin-bottom: 313px;
+}
+
+.header-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--color-background-header);
+  height: 130px;
+  align-content: center;
+}
+
+.menu-head {
   display: flex;
-  align-items: flex-start;
-}
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 35px;
-  box-sizing: border-box;
-}
-
-.content {
-  flex: 1;
-  width: auto;
-  overflow-y: auto;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding-inline: 50px;
 }
 
-.menu-button {
-  width: 50px;
+.header-logo {
+  width: 120px;
 }
 
-.menu-button:hover {
-  scale: calc(1.2);
-  cursor: pointer;
+figure {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.menu-img {
-  width: 80px;
+.burger-img {
+  width: 250px;
+  border-radius: 100%;
+  transform: translate(0px, 50%);
+  position: absolute;
+  bottom: 0;
+}
+
+.burger-house-img {
+  transform: translate(0px, 275%);
+  position: absolute;
+  bottom: 20px;
+}
+
+.burger-meal {
+  display: flex;
+  align-items: center;
+  height: auto;
 }
 
 .orange-line {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end; 
-  background: var(--color-background-header);
-  height: 65px;
-  width: 100%;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;  
+    background: var(--color-background-header);
+    height: 65px;  
+    padding-left: 70px;
 }
 
 .orange-inner {
@@ -71,14 +102,14 @@ html {
   font-family: "Palanquin";
 }
 
-.burger-vec {
+.menu-vec {
   height: 100px;
   width: 100px;
   transform: translate(-7px, 2px);
 }
 
 footer {
-  margin-top: 100px;
+  margin-top: 55px;
   background-color: var(--color-background-header);
   height: 130px;
   display: flex;

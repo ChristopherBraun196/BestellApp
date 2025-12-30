@@ -15,8 +15,8 @@
   grid-column: 1 / 2;
   grid-row: 1;
 }
-h3 {
-  font-size: 28px;
+.dish-name {
+  font-size: 22px;
 }
 
 .dish-cover {
@@ -29,16 +29,14 @@ h3 {
 }
 
 .dish-actions {
-  grid-column: 2 / 3;
-  grid-row: 1 / span 2;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-
-  height: 100%;
-  align-self: stretch;
+    grid-column: 2 / 3;
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    align-self: stretch;
 }
 
 .dish-price {
@@ -57,9 +55,9 @@ h3 {
 
 .dish-desc {
   font-family: "Palanquin";
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 500;
-  padding-top: 15px;
+  /* padding-top: 15px; */
 }
 
 .dish-added {
@@ -77,4 +75,85 @@ h3 {
 .dish-added:hover {
   scale: calc(1.05);
   cursor: pointer;
+}
+
+
+@media (max-width: 450px){
+
+  .dish-name {
+    font-size: 22px;
+    text-align: center;
+}
+
+.dish-cover {
+    display: block;
+    width: 240px;
+    height: 135px;
+    border-radius: 18px;
+    object-fit: cover;
+    object-position: 0% 65%;
+}
+
+.dish-actions {
+        grid-column: 2 / 3;
+        grid-row: 1 / span 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        align-self: stretch;
+    }
+
+.dish-info {
+    display: flex;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    column-gap: 24px;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+}
+.dish-desc {
+
+    font-family: "Palanquin";
+    font-size: 12px;
+    font-weight: 400;
+    /* padding-top: 15px; */
+    text-align: center;
+    word-break: break-word;
+}
+.dishes-card {
+    display: flex;
+    background-color: var(--color-background-dishes);
+    padding: 5px;    
+    margin: 24px;
+    font-family: "Palanquin";
+    border-radius: 18px;
+    max-width: 950px;
+    gap: 5px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.dish-price {
+    font-size: 21px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.dish-added {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    height: 44px;
+    border-radius: 20px;
+    border: none;
+    background: white;
+    cursor: pointer;
+}
+
 }

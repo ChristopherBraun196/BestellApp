@@ -1,6 +1,6 @@
 .open-Menu {
   position: fixed;
-  top: 400px;
+  top: 515px;
   background-color: var(--color-background-basket);
   color: white;
   right: max(0px, calc((100vw - 1440px) / 2));
@@ -183,3 +183,50 @@ hr {
   text-align: center;
   margin-left: 0;
 }
+
+@media (max-width: 450px) {
+ .open-Menu {
+   
+    left: 50%;
+    bottom: 0;
+    top: 195px;    
+    width: 285px;    
+    max-height: 400px;
+    padding-bottom: 18px;
+    border-radius: 30px 30px 30px 30px;    
+    transform: translateX(-50%) translateY(0);
+    transition: transform 700ms ease;
+    z-index: 1;
+  }
+
+  
+  .open-Menu.isHidden {
+    transform: translateX(-50%) translateY(300%);
+  }
+
+
+  .meal-list {
+    color: var(--color-background-basket);
+    background-color: var(--color-background-dishes);
+    border-radius: 18px;
+    padding: 0px 18px;
+    margin: 5px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-end;
+  }
+
+  #myMealList {
+    
+    height: 230px;
+}
+
+
+  .order-dialog-content img {
+    width: 280px;
+    margin-bottom: -25px;
+  }
+
+}
+

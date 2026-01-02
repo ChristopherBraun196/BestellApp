@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/standard.css" />
     <link rel="stylesheet" href="./styles/basket.css" />
+    <link rel="stylesheet" href="./styles/dishesboard.css">
   </head>
   <body onload="init()">
     <header class="header-bar">
@@ -34,76 +35,84 @@
         </a>
       </nav>
     </header>
-    <div class="content-wrapper">
-      <section class="header-container">
-        <div class="main-container">
-          <img class="main-img" src="./assets/img/header-img.png" alt="" />
-          <figure>
-            <img
-              class="burger-img"
-              src="./assets/img/Burger-House-img.png"
-              alt=""
-            />
-          </figure>
-          <div class="burger-house">
-            <img class="stars" src="./assets/icons/stars.svg" alt="" />
-            <h1 class="heading"><span>Burger</span>House</h1>
-            <h2>
-              The best of Burgers, Pizza, and Greens, all in one great place.
-            </h2>
-          </div>
-        </div>
-      </section>
-      <section class="basket-wrapper">
-        <div class="open-Menu" id="openMenu">
-          <div class="basket-overlay">
-            <button class="close-basket" onclick="openMenu()">x</button>
-            <h4>Your Basket</h4>
-          </div>
 
-          <div class="overflow">
-            <div id="myMealList"></div>
-          </div>
-          <section id="basketTotal"></section>
-          <section class="buyToButton">
-            <button onclick="buyNow()" class="buyButton">Buy now</button>
-          </section>
-        </div>
-        <div id="orderDialog" class="order-dialog d-none"></div>
-      </section>
-    </div>
-
-    <section>
-      <div class="orange-line">
-        <div class="orange-inner">
+    <section class="header-container">
+      <div class="main-container">
+        <img class="main-img" src="./assets/img/header-img.png" alt="" />
+        <figure>
           <img
-            class="menu-vec"
-            src="./assets/icons/Burger-vektor.svg"
-            alt="Burger"
+            class="burger-img"
+            src="./assets/img/Burger-House-img.png"
+            alt=""
           />
-          <h5>Burger & Sandwiches</h5>
+        </figure>
+        <div class="burger-house">
+          <img class="stars" src="./assets/icons/stars.svg" alt="" />
+          <h1 class="heading"><span>Burger</span>House</h1>
+          <h2>
+            The best of Burgers, Pizza, and Greens, all in one great place.
+          </h2>
         </div>
       </div>
-
-      <div class="ws" id="burgerList"></div>
     </section>
 
-    <div class="orange-line">
-      <div class="orange-inner">
-        <img class="menu-vec" src="./assets/icons/Pizza.svg" alt="Pizza" />
-        <h5>Pizza (30cm)</h5>
-      </div>
-    </div>
+    <section class="menu-board">
+      <!-- "Burger & Sandwiches" -->
+      <div class="dishes-board">
+        <div class="orange-line">
+          <div class="orange-inner">
+            <img
+              class="menu-vec"
+              src="./assets/icons/Burger-vektor.svg"
+              alt="Burger"
+            />
+            <h5>Burger & Sandwiches</h5>
+          </div>
+        </div>
 
-    <div class="ws" id="pizzaList"></div>
+        <div class="ws" id="burgerList"></div>
 
-    <div class="orange-line">
-      <div class="orange-inner">
-        <img class="menu-vec" src="./assets/icons/Salad.svg" alt="Salat" />
-        <h5>Salad</h5>
+        <!-- Pizza -->
+        <div class="orange-line">
+          <div class="orange-inner">
+            <img class="menu-vec" src="./assets/icons/Pizza.svg" alt="Pizza" />
+            <h5>Pizza (30cm)</h5>
+          </div>
+        </div>
+
+        <div class="ws" id="pizzaList"></div>
+
+        <div class="orange-line">
+          <div class="orange-inner">
+            <img class="menu-vec" src="./assets/icons/Salad.svg" alt="Salat" />
+            <h5>Salad</h5>
+          </div>
+        </div>
+        <div class="ws" id="saladList"></div>
+
+        <div class="wrapper-menu ws" id="burgerList"></div>
       </div>
+      <div class="basket-board">       
+        <div class="open-Menu" id="openMenu">
+          <div class="basket-overlay">
+            <a class="close-basket" onclick="openMenu()">
+              <img src="./assets/img/close-button.png" alt="close-button"></a>
+            </a>
+            <h4>Your Basket</h4>
+          </div>
+        <div class="overflow">
+          <div id="myMealList"></div>
+          </div>
+          <div id="basketTotal"></div>
+          <div class="buyToButton">
+            <button onclick="buyNow()" class="buyButton">Buy now</button>
+          </div>
+        </div>
+        <div id="orderDialog" class="order-dialog d-none"></div>
+      
+     
     </div>
-    <div class="ws" id="saladList"></div>
+    </section>
 
     <footer>
       <section class="footer-ws">

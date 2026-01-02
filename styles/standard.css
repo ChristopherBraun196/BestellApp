@@ -31,11 +31,6 @@ h1 {
   margin: auto;
 }
 
-.content-wrapper {
-  display: flex;
-  max-width: 1440px;
-  margin: 0 auto;
-}
 
 .main-img {
   width: 100%;
@@ -131,36 +126,8 @@ h2 {
   height: auto;
 }
 
-.orange-line {
-  margin-top: 35px;
-  margin-bottom: 20px;
-  background: var(--color-background-header);
-  height: 70px;
-}
-
-.orange-inner {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding-left: 70px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 10px;
-  align-content: flex-start;
-  flex-wrap: nowrap;
-}
-
-.orange-line h5 {
-  padding-left: 5px;
-  font-size: 45px;
-  color: white;
-  font-family: "Palanquin";
-}
-
-.menu-vec {
-  height: 90px;
-  width: 90px;
-  transform: translate(-7px, -35px);
+.wrapper-menu {
+  width: calc(100% - 300px);
 }
 
 footer {
@@ -203,19 +170,6 @@ footer :hover {
     font-size: 60px;
   }
 
-  .orange-line h2 {
-    padding-left: 5px;
-    font-size: 30px;
-    color: white;
-    font-family: "Palanquin";
-  }
-
-  .menu-vec {
-    height: 80px;
-    width: 80px;
-    transform: translate(-7px, -15px);
-  }
-
   h2 {
     font-size: 14px;
     text-align: center;
@@ -224,22 +178,6 @@ footer :hover {
   .stars {
     margin-top: 80px;
     padding-bottom: 30px;
-  }
-  .orange-inner {
-    display: flex;
-    align-items: flex-end;
-    gap: 5px;
-  }
-
-  .orange-line {
-    margin-top: 42px;
-    margin-bottom: 21px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    background: var(--color-background-header);
-    height: 57px;
-    padding-left: 65px;
   }
 
   .dishes-card {

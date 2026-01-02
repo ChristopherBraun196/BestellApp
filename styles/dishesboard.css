@@ -1,0 +1,85 @@
+.menu-board {
+  display: flex;
+  align-items: flex-start;
+  width: calc(100% - 300px);
+  max-width: 1440px;
+  margin: auto;
+}
+
+.dishes-board {
+  display: flex;
+  width: calc(100% - 300px);
+  flex-direction: column;
+}
+
+.basket-board {
+  display: flex;
+  position: sticky;
+  flex-direction: row;
+  margin-top: 130px;
+  top: 175px;
+}
+
+.orange-line {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  background: var(--color-background-header);
+  height: 70px;
+}
+
+.orange-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.orange-line h5 {
+  padding-left: 5px;
+  font-size: 45px;
+  color: white;
+  font-family: "Palanquin";
+}
+
+.menu-vec {
+  height: 90px;
+  width: 90px;
+  transform: translate(-7px, -35px);
+}
+
+@media (max-width: 900px) {
+  .orange-line {
+    margin-top: 42px;
+    margin-bottom: 21px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: var(--color-background-header);
+    height: 57px;
+    padding-left: 65px;
+  }
+
+  .orange-line h2 {
+    padding-left: 5px;
+    font-size: 30px;
+    color: white;
+    font-family: "Palanquin";
+  }
+
+  .orange-inner {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+  }
+  
+  .menu-vec {
+    height: 80px;
+    width: 80px;
+    transform: translate(-7px, -15px);
+  }
+}

@@ -6,14 +6,15 @@
   margin-inline: 65px;
   font-family: "Palanquin";
   border-radius: 18px;
-  max-width: 950px;
+  max-width: 880px;
   gap: 20px;
   height: auto;
 }
 
 .ws {
-  max-width: 1440px;
+  max-width: calc (1440px - 300px);
   margin: auto;
+  
 }
 
 .dish-head {
@@ -61,8 +62,7 @@
 .dish-desc {
   font-family: "Palanquin";
   font-size: 16px;
-  font-weight: 500;
-  /* padding-top: 15px; */
+  font-weight: 500; 
 }
 
 .dish-added {

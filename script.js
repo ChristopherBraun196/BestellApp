@@ -5,46 +5,22 @@ let deliveryPrice = 5.0;
 
 function init() {
   loadBasketFromLocalStorage();
-  document.getElementById("burgerList").innerHTML = loadBurger(myDishesBurger);
-  document.getElementById("pizzaList").innerHTML = loadPizza(myDishesPizza);
-  document.getElementById("saladList").innerHTML = loadSalad(myDishesSalad);
+
+  loadDishes(myDishesBurger, 'burgerList');
+  loadDishes(myDishesPizza, 'pizzaList');
+  loadDishes(myDishesSalad, 'saladList');
+
   renderBasket();
 }
 
-function loadBurger(myDishesBurger) {
-  let html = "";
+function loadDishes(myDishesBurger, containerID) {
+  let burgerList = document.getElementById(containerID);
+  burgerList.innerHTML = "";
 
   for (let i = 0; i < myDishesBurger.length; i++) {
     const dish = myDishesBurger[i];
-
-    html += DishCardTemplate(dish);
+    burgerList.innerHTML += DishCardTemplate(dish);
   }
-
-  return html;
-}
-
-function loadPizza(myDishesPizza) {
-  let html = "";
-
-  for (let i = 0; i < myDishesPizza.length; i++) {
-    const dish = myDishesPizza[i];
-
-    html += DishCardTemplate(dish);
-  }
-
-  return html;
-}
-
-function loadSalad(myDishesSalad) {
-  let html = "";
-
-  for (let i = 0; i < myDishesSalad.length; i++) {
-    const dish = myDishesSalad[i];
-
-    html += DishCardTemplate(dish);
-  }
-
-  return html;
 }
 
 function openMenu() {
@@ -53,9 +29,9 @@ function openMenu() {
   overlay.classList.toggle("isHidden");
 }
 
-// Basket
 
-function renderBasket() {
+
+function renderBasket() {     // Render "Your Basket"
   document.getElementById("myMealList").innerHTML = loadBasket(basketList);
   renderBasketTotal();
 }

@@ -1,17 +1,27 @@
 .open-Menu {
-  position: fixed;
-  top: 515px;
+  position: sticky;
+  top: 228px;
   background-color: var(--color-background-basket);
   color: white;
-  right: max(0px, calc((100vw - 1440px) / 2));
-  width: 325px;
-  min-height: 400px;
+  /* right: max(0px, calc((100vw - 1440px) / 2)); */
+  width: 300px;
+  /* min-height: 400px; */
   max-height: 600px;
   padding-bottom: 18px;
   border-radius: 30px 0px 0px 30px;
   transform: translateX(0);
   transition: transform 250ms ease;
   z-index: 1;
+}
+
+.basket-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* height: 20px; */
+  width: 300px;
+  flex-grow: 1;
+  /* position: sticky; */
+  top: 50px;
 }
 
 .open-Menu.isHidden {
@@ -184,9 +194,30 @@ hr {
   margin-left: 0;
 }
 
+.basket-overlay {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: relative;
+}
+.close-basket {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  background-color: var(--color-background-basket);
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 @media (max-width: 800px) {
   .open-Menu {
-    top: 415px;;
+    top: 415px;
   }
 
   #myMealList {
@@ -195,6 +226,10 @@ hr {
 }
 
 @media (max-width: 550px) {
+  .close-basket {
+    top: 5px;
+    right: 24px;
+  }
   .open-Menu {
     left: 50%;
     bottom: 0;

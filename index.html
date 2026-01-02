@@ -13,79 +13,54 @@
     <script src="./scripts/template.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/standard.css" />
-    <link rel="stylesheet" href="./styles/basket.css" />   
+    <link rel="stylesheet" href="./styles/basket.css" />
   </head>
   <body onload="init()">
-
     <header class="header-bar">
-        <nav class="menu-head">
-          <a href="#">
-            <img
-              class="header-logo"              
-              src="./assets/icons/Logo.svg"
-              alt="header-logo"
-            />
-          </a>
-          <a  onclick="openMenu()">
-            <img class="header-basket" src="./assets/icons/trolley.svg" alt="Warenkorb öffnen" />
-          </a>
-        </nav>
+      <nav class="menu-head">
+        <a href="#">
+          <img
+            class="header-logo"
+            src="./assets/icons/Logo.svg"
+            alt="header-logo"
+          />
+        </a>
+        <a onclick="openMenu()">
+          <img
+            class="header-basket"
+            src="./assets/icons/trolley.svg"
+            alt="Warenkorb öffnen"
+          />
+        </a>
+      </nav>
     </header>
-    <section class="header-container">
-      <div class="main-container">
-        <img class="main-img" src="./assets/img/header-img.png" alt="">
-        <figure>
-          <img class="burger-img" src="./assets/img/Burger-House-img.png" alt="">
-        </figure>
-            <div class="burger-house">
-         <img class="stars" src="./assets/icons/stars.svg" alt="">
-          <h1 class="heading"><span>Burger</span>House</h1>
-          <h6>The best of Burgers, Pizza, and Greens, all in one great place.</h6>
+    <div class="content-wrapper">
+      <section class="header-container">
+        <div class="main-container">
+          <img class="main-img" src="./assets/img/header-img.png" alt="" />
+          <figure>
+            <img
+              class="burger-img"
+              src="./assets/img/Burger-House-img.png"
+              alt=""
+            />
+          </figure>
+          <div class="burger-house">
+            <img class="stars" src="./assets/icons/stars.svg" alt="" />
+            <h1 class="heading"><span>Burger</span>House</h1>
+            <h2>
+              The best of Burgers, Pizza, and Greens, all in one great place.
+            </h2>
+          </div>
         </div>
-      </div>
-    </section>
-      </div>
-
-    </section>
-    
-<section>
-  <div class="orange-line">
-    <div class="orange-inner">
-      <img class="menu-vec" src="./assets/icons/Burger-vektor.svg" alt="Burger" />
-      <h2>Burger & Sandwiches</h2>
-    </div>
-  </div>
-
-  <div class="ws" id="burgerList"></div>
-</section>
-
-   <div class="orange-line">
-    <div class="orange-inner">
-       <img class="menu-vec" 
-          src="./assets/icons/Pizza.svg" 
-          alt="Pizza"/> 
-       <h2>Pizza (30cm)</h2> 
-       </div>
-  </div>
-
-
-      <div class="ws" id="pizzaList"></div>
-    </section>
-
-        <div class="orange-line">
-    <div class="orange-inner">
-          <img class="menu-vec" 
-            src="./assets/icons/Salad.svg" 
-            alt="Salat"/> 
-          <h2>Salad</h2> 
-        </div> 
-</div> 
-      <div class="ws" id="saladList"></div>
-    </section>
-    
-    <section class="basket-wrapper">
+      </section>
+      <section class="basket-wrapper">
         <div class="open-Menu" id="openMenu">
-          <h4>Your Basket</h4>
+          <div class="basket-overlay">
+            <button class="close-basket" onclick="openMenu()">x</button>
+            <h4>Your Basket</h4>
+          </div>
+
           <div class="overflow">
             <div id="myMealList"></div>
           </div>
@@ -96,15 +71,46 @@
         </div>
         <div id="orderDialog" class="order-dialog d-none"></div>
       </section>
+    </div>
+
+    <section>
+      <div class="orange-line">
+        <div class="orange-inner">
+          <img
+            class="menu-vec"
+            src="./assets/icons/Burger-vektor.svg"
+            alt="Burger"
+          />
+          <h5>Burger & Sandwiches</h5>
+        </div>
+      </div>
+
+      <div class="ws" id="burgerList"></div>
     </section>
+
+    <div class="orange-line">
+      <div class="orange-inner">
+        <img class="menu-vec" src="./assets/icons/Pizza.svg" alt="Pizza" />
+        <h5>Pizza (30cm)</h5>
+      </div>
+    </div>
+
+    <div class="ws" id="pizzaList"></div>
+
+    <div class="orange-line">
+      <div class="orange-inner">
+        <img class="menu-vec" src="./assets/icons/Salad.svg" alt="Salat" />
+        <h5>Salad</h5>
+      </div>
+    </div>
+    <div class="ws" id="saladList"></div>
 
     <footer>
-      <section  class="footer-ws">
-
-      <p>&copy; BurgerHouse</p>
-      <p>Imprint</p>
-      <p>Cookie Preferences</p>
-    </section>
+      <section class="footer-ws">
+        <p>&copy; BurgerHouse</p>
+        <p>Imprint</p>
+        <p>Cookie Preferences</p>
+      </section>
     </footer>
     <section class="footer-Bar">
       <nav class="footer-nav">
@@ -116,18 +122,7 @@
           <img src="./assets/icons/trolley.svg" alt="Warenkorb öffnen" />
         </a>
       </nav>
-    </section> 
+    </section>
     <script src="./script.js"></script>
-    
   </body>
 </html>
-
-
-
-
-      
-
-
-
-
-   

@@ -1,7 +1,7 @@
 let myDishesBurger = [
   {
     id: 1,
-    image: "./assets/img/dishes/burger/burger0.svg",
+    image: "./assets/img/dishes/burger/burger0.png",
     name: "Veggie mushroom black burger",
     price: 16.9,
     quantity: 1,
@@ -9,7 +9,7 @@ let myDishesBurger = [
   },
   {
     id: 2,
-    image: "./assets/img/dishes/burger/burger1.svg",
+    image: "./assets/img/dishes/burger/burger1.png",
     name: "All meat burger",
     price: 15.9,
     quantity: 1,
@@ -17,7 +17,7 @@ let myDishesBurger = [
   },
   {
     id: 3,
-    image: "./assets/img/dishes/burger/burger2.svg",
+    image: "./assets/img/dishes/burger/burger2.png",
     name: "Beff red burger",
     price: 14.9,
     quantity: 1,
@@ -25,7 +25,7 @@ let myDishesBurger = [
   },
   {
     id: 4,
-    image: "./assets/img/dishes/burger/burger3.svg",
+    image: "./assets/img/dishes/burger/burger3.png",
     name: "Big chicken burger",
     price: 15.9,
     quantity: 1,
@@ -36,7 +36,7 @@ let myDishesBurger = [
 let myDishesPizza = [
   {
     id: 5,
-    image: "./assets/img/dishes/pizza/pizza0.svg",
+    image: "./assets/img/dishes/pizza/pizza0.png",
     name: "Pizza Margherita",
     price: 11.9,
     quantity: 1,
@@ -44,7 +44,7 @@ let myDishesPizza = [
   },
   {
     id: 6,
-    image: "./assets/img/dishes/pizza/pizza1.svg",
+    image: "./assets/img/dishes/pizza/pizza1.png",
     name: "Pizza Chorizo",
     price: 13.9,
     quantity: 1,
@@ -52,7 +52,7 @@ let myDishesPizza = [
   },
   {
     id: 7,
-    image: "./assets/img/dishes/pizza/pizza2.svg",
+    image: "./assets/img/dishes/pizza/pizza2.png",
     name: "Pizza Funghi",
     price: 12.9,
     quantity: 1,
@@ -60,7 +60,7 @@ let myDishesPizza = [
   },
   {
     id: 8,
-    image: "./assets/img/dishes/pizza/pizza3.svg",
+    image: "./assets/img/dishes/pizza/pizza3.png",
     name: "Quattro Formaggi with Chicken",
     price: 15.9,
     quantity: 1,
@@ -72,7 +72,7 @@ let myDishesPizza = [
 let myDishesSalad = [
   {
     id: 9,
-    image: "./assets/img/dishes/salad/salad0.svg",
+    image: "./assets/img/dishes/salad/salad0.png",
     name: "Warm beef arugula salad",
     price: 16.9,
     quantity: 1,
@@ -81,7 +81,7 @@ let myDishesSalad = [
   },
   {
     id: 10,
-    image: "./assets/img/dishes/salad/salad1.svg",
+    image: "./assets/img/dishes/salad/salad1.png",
     name: "Mini green Salad",
     price: 7.9,
     quantity: 1,
@@ -89,7 +89,7 @@ let myDishesSalad = [
   },
   {
     id: 11,
-    image: "./assets/img/dishes/salad/salad2.svg",
+    image: "./assets/img/dishes/salad/salad2.png",
     name: "Green Salad with sea food",
     price: 16.9,
     quantity: 1,
@@ -98,7 +98,7 @@ let myDishesSalad = [
   },
   {
     id: 12,
-    image: "./assets/img/dishes/salad/salad3.svg",
+    image: "./assets/img/dishes/salad/salad3.png",
     name: "Vegan green salad with tofu",
     price: 14.9,
     quantity: 1,

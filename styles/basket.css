@@ -106,8 +106,6 @@ strong {
   height: 410px;
 }
 
-
-
 .number {
   font-family: "Palanquin";
 }
@@ -144,16 +142,46 @@ strong {
 }
 
 .order-dialog-content {
-  background: none;
+  background-color: var(--color-background-basket);
+  color: var(--color-background-dishes);
   padding: 32px;
   border-radius: 18px;
   text-align: center;
-  max-width: 420px;
+  width: 450px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.order-dialog-content img {
-  width: 425px;
-  margin-bottom: -25px;
+* .order-dialog-content-delete {
+  width: 25px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  
+}
+
+.carImage {
+    margin-bottom: 15px;    
+    width: 120px;
+    
+}
+
+h5 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-family: "Palanquin";  
+}
+
+span {
+  font-family: "Palanquin";
+}
+
+.order-dialog-content-delete:hover {
+  scale: calc(1.2);
 }
 
 .d-none {
@@ -198,7 +226,7 @@ hr {
   height: 20px;
 }
 
-.close-basket:hover{
+.close-basket:hover {
   scale: calc(1.1);
 }
 

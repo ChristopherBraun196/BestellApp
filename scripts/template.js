@@ -83,14 +83,14 @@ function myTotalPrice(total) {
 function orderSuccessTemplate() {
   return `
     <div class="order-dialog-content">
-      <img
-        class="confirm"
-        src="./assets/img/Confirmation.svg"
-        alt="Bestellung erfolgreich"
-      >
-      <button class="buyButton" onclick="closeOrderDialog()">
-        Schließen
-      </button>
+      <a onclick="onclick="closeOrderDialog()">
+          <img class="order-dialog-content-delete"src="./assets/img/close-button.png" alt="close-button">
+        </a>
+       <img class="carImage" src="./assets/img/carImage.png">
+      <h5> Order confirmed!</h5>
+      <span>Your food is on the way!</span>
+      
+     
     </div>
   `;
 }

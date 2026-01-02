@@ -83,7 +83,7 @@ function myTotalPrice(total) {
 function orderSuccessTemplate() {
   return `
     <div class="order-dialog-content">
-      <a onclick="onclick="closeOrderDialog()">
+      <a onclick="closeOrderDialog()">
           <img class="order-dialog-content-delete"src="./assets/img/close-button.png" alt="close-button">
         </a>
        <img class="carImage" src="./assets/img/carImage.png">

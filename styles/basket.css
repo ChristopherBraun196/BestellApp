@@ -1,20 +1,16 @@
 .open-Menu {
-  position: sticky;
-  top: 228px;
-  background-color: var(--color-background-basket);
-  color: white;
-  width: 300px;
-
-  max-height: 600px;
-  padding-bottom: 18px;
-  border-radius: 30px 0px 0px 30px;
-  transform: translateX(0);
-  transition: transform 250ms ease;
-  z-index: 1;
+    position: sticky;
+    top: 228px;
+    background-color: var(--color-background-basket);
+    color: white;    
+    max-height: 600px;
+    padding-bottom: 18px;
+    border-radius: 30px 12px 16px 30px;
+    z-index: 1;
 }
 
 .open-Menu.isHidden {
-  transform: translateX(350%);
+  display: none;
 }
 
 h4 {
@@ -161,19 +157,19 @@ strong {
   position: absolute;
   right: 25px;
   top: 25px;
-  
 }
 
 .carImage {
-    margin-bottom: 15px;    
-    width: 120px;
-    
+  margin-bottom: 15px;
+  width: 120px;
 }
 
 h5 {
-  font-size: 32px;
+  font-size: 40px;
   margin-bottom: 15px;
-  font-family: "Palanquin";  
+  font-family: "Palanquin";
+  font-weight: bolder;
+  color: var(--color-background-header);
 }
 
 span {
@@ -230,6 +226,18 @@ hr {
   scale: calc(1.1);
 }
 
+@media (max-width: 1090px) {
+  h5 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 900px) {
+    .open-Menu {
+        top: 415px;
+        left: 150px;
+    }
+}
+
 @media (max-width: 800px) {
   .open-Menu {
     top: 415px;
@@ -240,7 +248,7 @@ hr {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .close-basket {
     top: 5px;
     right: 24px;
@@ -253,13 +261,7 @@ hr {
     max-height: 400px;
     padding-bottom: 18px;
     border-radius: 30px 30px 30px 30px;
-    transform: translateX(-50%) translateY(0);
-    transition: transform 700ms ease;
     z-index: 1;
-  }
-
-  .open-Menu.isHidden {
-    transform: translateX(-50%) translateY(300%);
   }
 
   .meal-list {
@@ -284,8 +286,22 @@ hr {
   }
 }
 
+@media (max-width: 420px) {
+  .open-Menu {
+    left: 15%;
+    bottom: 0px;
+    top: 195px;
+    width: 260px;
+    max-height: 400px;
+    padding-bottom: 18px;
+    border-radius: 30px 30px 30px 30px;
+    z-index: 1;
+  }
+}
+
 @media (max-width: 375px) {
   .open-Menu {
     top: 160px;
+    left: 7%;
   }
 }
